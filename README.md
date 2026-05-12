@@ -1,4 +1,4 @@
-# 🛒 Workshop Spring Boot + JPA
+# Workshop Spring Boot + JPA
 
 ![Java](https://img.shields.io/badge/Java-17+-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)
@@ -10,13 +10,13 @@
 
 ---
 
-## 📋 Sobre o projeto
+## Sobre o projeto
 
 Este projeto foi desenvolvido como parte de um workshop prático de Spring Boot com JPA. O objetivo é construir uma API RESTful completa com domínio de e-commerce, abordando desde a modelagem das entidades até o tratamento adequado de erros HTTP.
 
 ---
 
-## 🏗️ Arquitetura
+## Arquitetura
 
 O projeto segue o padrão de **arquitetura em camadas**, separando responsabilidades de forma clara:
 
@@ -32,7 +32,7 @@ O projeto segue o padrão de **arquitetura em camadas**, separando responsabilid
 
 ---
 
-## 🗂️ Modelo de Domínio
+## Modelo de Domínio
 
 O sistema modela um contexto de e-commerce com as seguintes entidades e relacionamentos:
 
@@ -51,18 +51,18 @@ User  ───< Order >─── OrderItem >─── Product
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
-- ✅ CRUD completo de usuários, pedidos, produtos e categorias
-- ✅ Relacionamentos JPA: `@OneToMany`, `@ManyToMany`, `@OneToOne`, `@ManyToOne`
-- ✅ Tratamento de exceções centralizado com `@ControllerAdvice`
-- ✅ Respostas de erro padronizadas (timestamp, status, mensagem, path)
-- ✅ Banco de dados H2 em memória com dados de teste pré-carregados
-- ✅ Console H2 disponível em desenvolvimento
+- CRUD completo de usuários, pedidos, produtos e categorias
+- Relacionamentos JPA: `@OneToMany`, `@ManyToMany`, `@OneToOne`, `@ManyToOne`
+- Tratamento de exceções centralizado com `@ControllerAdvice`
+- Respostas de erro padronizadas (timestamp, status, mensagem, path)
+- Banco de dados H2 em memória com dados de teste pré-carregados
+- Console H2 disponível em desenvolvimento
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## Tecnologias utilizadas
 
 | Tecnologia | Finalidade |
 |---|---|
@@ -76,7 +76,7 @@ User  ───< Order >─── OrderItem >─── Product
 
 ---
 
-## 🚀 Como executar
+## Como executar
 
 ### Pré-requisitos
 
@@ -98,13 +98,13 @@ cd workshop-springboot-jpa
 
 A aplicação estará disponível em `http://localhost:8080`.
 
-### Console H2 (banco de dados em memória)
+### Console H2
 
 Acesse `http://localhost:8080/h2-console` com as credenciais configuradas em `application.properties`.
 
 ---
 
-## 🔗 Endpoints principais
+## Endpoints principais
 
 ### Usuários
 | Método | Endpoint | Descrição |
@@ -135,15 +135,15 @@ Acesse `http://localhost:8080/h2-console` com as credenciais configuradas em `ap
 
 ---
 
-## ⚠️ Tratamento de Exceções
+## Tratamento de Exceções
 
 O projeto implementa um mecanismo centralizado de tratamento de erros:
 
-**`ResourceNotFoundException`** → lançada quando um recurso não é encontrado pelo ID informado.
+**`ResourceNotFoundException`** — lançada quando um recurso não é encontrado pelo ID informado.
 
-**`ResourceExceptionHandler`** → intercepta as exceções via `@ControllerAdvice` e retorna respostas HTTP padronizadas.
+**`ResourceExceptionHandler`** — intercepta as exceções via `@ControllerAdvice` e retorna respostas HTTP padronizadas.
 
-**Exemplo de resposta de erro (404):**
+Exemplo de resposta de erro (404):
 ```json
 {
   "timestamp": "2024-01-15T10:30:00Z",
@@ -156,7 +156,7 @@ O projeto implementa um mecanismo centralizado de tratamento de erros:
 
 ---
 
-## 📚 Conceitos praticados
+## Conceitos praticados
 
 - Arquitetura em camadas (Resources → Services → Repositories)
 - Mapeamento objeto-relacional com JPA/Hibernate
@@ -169,7 +169,7 @@ O projeto implementa um mecanismo centralizado de tratamento de erros:
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 Feito por **Paulo H** — projeto desenvolvido para fins educacionais e de portfólio.
 
